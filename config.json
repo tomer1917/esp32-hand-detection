@@ -1,0 +1,39 @@
+{
+  "source": "esp32",
+  "webcam_index": 0,
+
+  "esp32": {
+    "use_mdns": true,
+    "host": "10.9.2.120",
+    "stream_path": "/stream",
+    "fallback_ip": "10.9.2.120"
+  },
+
+  "detection": {
+    "max_hands": 1,
+    "min_detection_confidence": 0.6,
+    "min_tracking_confidence": 0.5,
+    "min_gesture_confidence": 0.5
+  },
+
+  "debounce": {
+    "stable_time_s": 0.4,
+    "cooldown_s": 1.2,
+    "repeat_interval_s": 0.5
+  },
+
+  "fire_actions": true,
+
+  "gestures": {
+    "open_palm": "play_pause",
+    "thumb_up": "volume_up",
+    "thumb_down": "volume_down",
+    "two_fingers": "next_track",
+    "one_finger": "previous_track"
+  },
+
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8000
+  }
+}

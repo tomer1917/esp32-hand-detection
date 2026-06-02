@@ -1,0 +1,9 @@
+# Python 3.11 or 3.12 (MediaPipe does not support 3.13 yet)
+opencv-python>=4.8
+mediapipe>=0.10.9
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pynput>=1.7
+zeroconf>=0.131
+httpx>=0.27
+numpy>=1.26,<2.0

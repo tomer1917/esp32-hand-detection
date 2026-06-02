@@ -1,0 +1,21 @@
+# Claude Code internals
+.claude/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# MediaPipe models (large binary files, auto-downloaded on first run)
+backend/models/
+
+# Editors / OS
+.vscode/
+.idea/
+*.suo
+*.user
+Thumbs.db
+.DS_Store

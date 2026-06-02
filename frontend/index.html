@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GestureMedia</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">✋</div>
+      <div class="brand-text">
+        <span class="brand-name">Gesture<em>Media</em></span>
+        <span class="brand-sub">ESP32 hand control</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="conn-pill" id="conn-pill">
+        <span id="dot" class="dot offline"></span>
+        <span id="status-text">connecting…</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── Video column ── -->
+    <section class="video-card">
+      <div class="video-wrap">
+        <img id="stream" src="/video" alt="live feed">
+        <div class="scanline"></div>
+
+        <!-- Action toast — appears for 1.5 s when something fires -->
+        <div class="action-toast" id="action-toast">
+          <span id="toast-text"></span>
+        </div>
+
+        <!-- Corner badges -->
+        <div class="badge badge-tl" id="source-badge">—</div>
+        <div class="badge badge-tr" id="fps-badge">— fps</div>
+      </div>
+    </section>
+
+    <!-- ── Control column ── -->
+    <section class="panel">
+
+      <!-- Gesture card -->
+      <div class="gesture-card" id="gesture-card">
+        <div class="gc-label">DETECTING</div>
+        <div class="gc-emoji" id="gesture-emoji">🤚</div>
+        <div class="gc-name"  id="gesture-name">—</div>
+        <div class="confidence-wrap">
+          <div class="confidence-bar" id="conf-bar"></div>
+        </div>
+        <div class="gc-hint" id="gc-hint">show your hand to the camera</div>
+      </div>
+
+      <!-- Actions toggle -->
+      <button id="toggle" class="toggle-btn on">
+        <span class="toggle-icon">⏻</span>
+        <span id="toggle-label">Actions enabled</span>
+      </button>
+
+      <!-- Recent history -->
+      <div class="history-card">
+        <div class="section-label">RECENT ACTIONS</div>
+        <ul id="history-list" class="history-list">
+          <li class="history-empty">No actions yet</li>
+        </ul>
+      </div>
+
+      <!-- Gesture legend -->
+      <div class="legend-card">
+        <div class="section-label">GESTURES</div>
+        <ul id="legend-list" class="legend-list"></ul>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
